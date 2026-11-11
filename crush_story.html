@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maybe They Like You Back</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #100d19;
+      --card: #1c1728;
+      --text: #f8f3ff;
+      --muted: #b9adc9;
+      --pink: #ff8fbd;
+      --purple: #b99aff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 48px 18px;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(ellipse at 15% 10%, #56305a55, transparent 38%),
+        radial-gradient(ellipse at 90% 85%, #493b8050, transparent 40%),
+        var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .story {
+      width: min(100%, 720px);
+      padding: clamp(28px, 6vw, 58px);
+      border: 1px solid #ffffff18;
+      border-radius: 26px;
+      background: linear-gradient(145deg, #241c34, var(--card));
+      box-shadow: 0 24px 80px #0008;
+      animation: appear 900ms ease both;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--pink);
+      font: 700 0.75rem/1.4 system-ui, sans-serif;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 30px;
+      font-size: clamp(2.2rem, 7vw, 4rem);
+      line-height: 1.04;
+      letter-spacing: -0.045em;
+    }
+
+    h1 span {
+      color: var(--pink);
+    }
+
+    .story-text {
+      color: #eee7f6;
+      font-size: clamp(1.08rem, 2.5vw, 1.25rem);
+      line-height: 1.9;
+    }
+
+    .story-text p { margin: 0 0 1.25em; }
+
+    .emphasis {
+      color: #ffd0e4;
+      font-weight: bold;
+    }
+
+    .quote {
+      margin: 30px 0;
+      padding: 18px 22px;
+      border-left: 3px solid var(--purple);
+      border-radius: 0 12px 12px 0;
+      background: #b99aff12;
+      color: #e5d8ff;
+      font-size: 1.2em;
+      font-style: italic;
+    }
+
+    .ending {
+      margin-top: 34px;
+      padding-top: 26px;
+      border-top: 1px solid #ffffff20;
+      color: #ffd0e4;
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+
+    .heart {
+      display: inline-block;
+      margin-left: 5px;
+      color: var(--pink);
+      animation: pulse 1.8s ease-in-out infinite;
+    }
+
+    @keyframes appear {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      50% { transform: scale(1.2); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="story">
+    <p class="eyebrow">A little story about mixed signals</p>
+    <h1>Maybe they <span>like you back.</span></h1>
+
+    <section class="story-text">
+      <p>I thought my crush secretly hated me.</p>
+
+      <p>Every time I tried to talk to her in the hallway, she'd go quiet and walk away with her friends.</p>
+
+      <p>I texted her one time and she left me on read for a whole day. A WHOLE day. I was staring at my phone like an idiot.</p>
+
+      <p>Then at lunch I sat at her table and she literally got up and moved.</p>
+
+      <p>So I'm thinking, okay, she hates me, I'm never trying again, I'm actually embarrassed.</p>
+
+      <div class="quote">Then her best friend tells me, "She thinks <em>you</em> don't like <em>her</em>."</div>
+
+      <p>Apparently she kept walking away because her friends would not stop teasing her about me, and she got shy. And she left me on read because she kept typing and deleting her reply.</p>
+
+      <p class="ending">She didn't hate me at all. She liked me back, she was just as nervous as I was. <span class="heart">♥</span></p>
+    </section>
+  </main>
+</body>
+</html>
